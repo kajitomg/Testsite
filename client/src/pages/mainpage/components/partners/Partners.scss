@@ -1,0 +1,141 @@
+@import './../../../../styles/colors.scss';
+
+.partners {
+	background: $white;
+	padding: 70px 0;
+	// .partners__name
+
+	&__name {
+		.name__logo {
+			background: $white;
+		}
+	
+		// .name__title
+	
+		.name__title {
+			background: $white;
+			color: #000;
+		}
+	
+		// .name__subtitle
+	
+		.name__subtitle {
+			background: $white;
+			color: $red;
+		}
+	}
+
+	// .partners__text
+
+	&__text {
+		display: inline-block;
+		color: #777777;
+		margin: 0 0 40px 0;
+		max-width: 600px;
+		line-height: 26px;
+		font-family: 'Poppins';
+	}
+	&__partner-slider {
+		margin: 0 auto;
+		display: flex;
+		flex-direction: column;
+		max-width: calc(162px * 4);
+		@media (max-width:991px) {
+			max-width: calc(150px * 4);
+		}
+		@media (max-width:768px) {
+			max-width: calc(110px * 3);
+		}
+		@media (max-width:480px) {
+			max-width: calc(110px * 2);
+		}
+	}
+}
+
+.partner-slider {
+
+	// .slider__elements
+
+	&__elements {
+	}
+
+	// .slider__buttons
+
+	&__buttons {
+		justify-content: center;
+		display: flex;
+		margin: 40px;
+		perspective: 14vh;
+	}
+
+	// .slider__button
+
+	&__button {
+		cursor: pointer;
+		position: relative;
+		width: 50px;
+		height: 50px;
+		background: $yellow;
+		transform: rotate3d(0,0.5,0,45deg);
+		transition: 0.3s ease-in-out;
+		span{
+			transition: 0.3s ease-in-out;
+			position: absolute;
+			top: 55%;
+			left: 50%;
+			transform: translate(-50%,-50%) rotate(45deg);
+			background: #000;
+			width: 10px;
+			height: 2px;
+			&:nth-child(2){
+				top: 45%;
+				transform: translate(-50%,-50%) rotate(-45deg);
+
+			}
+		}
+		&:nth-child(2){
+			transform: rotate3d(0,-0.5,0,45deg);
+			span{
+				transform: translate(-50%,-50%) rotate(-45deg);
+				&:nth-child(2){
+					transform: translate(-50%,-50%) rotate(45deg);
+				}
+			}
+
+		}
+		&:hover{
+			transform: rotate3d(0,0,0,0);
+			background: $red;
+			span{
+				background: $white;
+			}
+		}
+
+	}
+
+	&__element{
+		height: auto;
+		display: flex;
+		overflow: visible;
+		justify-content: center;
+		.element__image {
+			img{
+				object-fit: cover;
+				width: 162px;
+				@media (max-width:991px) {
+					width: 150px;
+				}
+				@media (max-width:768px) {
+					width:110px;
+				}
+			}
+		}
+	}
+}
+.elements{
+	display: flex;
+	overflow: hidden;
+	justify-content:flex-start;
+
+}
+
