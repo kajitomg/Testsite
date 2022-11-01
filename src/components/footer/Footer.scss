@@ -1,0 +1,299 @@
+@import './../../styles/colors.scss';
+
+.footer {
+	z-index: 5;
+	position: relative;
+	padding: 70px 0 0 0;
+	width: 100%;
+	height: auto;
+	color: $white;
+	background: rgb(0, 0, 0);
+
+	&__background {
+		z-index: 0;
+		position: absolute;
+		top: 0;
+		left: 0;
+		height: 90%;
+		width: 100%;
+		background: rgba(27, 27, 27, 0.9);
+		img{
+			object-fit: contain;
+			z-index: 5;
+			width: 100%;
+			height:100%;
+		}
+	}
+
+
+	&__columns {
+		display: flex;
+		justify-content: space-between;
+		flex-wrap: wrap;
+		z-index: 1;
+	}
+
+	// .footer__column
+
+	&__column {
+	}
+
+	// .footer__policy
+
+	&__policy {
+	}
+}
+.column {
+	margin: 10px;
+	flex:0 1 22%;
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+	@media (max-width:991px) {
+		flex:1 1 45%;
+	}
+	@media (max-width:768px) {
+		flex:1 1 95%;
+	}
+
+	// .column__title
+
+	&__title {
+		width: 100%;
+		text-align: left;
+		position: relative;
+		font-size: 20px;
+		font-weight: 700;
+		margin: 0 0 30px 0;
+		span{
+			color:$yellow;
+		}
+		&::after{
+			transition: 0.4s ease-in-out;
+			position: absolute;
+			content: '';
+			top: auto;
+			bottom: -28.5px;
+			left: 0;
+			width: 40px;
+			height: 3px;
+			background: $red;
+		}
+
+	}
+	&:hover{
+		.column__title {
+			&::after{
+				width: 100%;
+				background: $yellow;
+			}
+	
+		}
+	}
+
+	// .column__line
+
+	&__line {
+	
+	}
+
+	// .column__content
+
+	&__content {
+		text-align: left;
+		font-size: 14px;
+		font-family:'Poppins';
+		line-height: 26px;
+		margin: 30px 0;
+	}
+
+	// .column__subtitle
+
+	&__subtitle {
+		margin: 0 0 30px 0;
+	}
+
+	// .column__button
+
+	&__button {
+		background: $yellow;
+		font-size: 14px;
+		border-radius: 5px;
+		padding: 15px 36px 12px;
+		transition: 0.4s ease-in-out;
+		&:hover{
+			background: $red;
+			color: $white;
+		}
+	}
+
+	// .column__links
+
+	&__links {
+		display: flex;
+		flex-direction: column;
+	}
+
+	// .column__link
+
+	&__link {
+		cursor: pointer;
+		margin: 5px 0;
+		transition: 0.4s ease-in-out;
+		&:hover{
+			color: $yellow;
+		}
+	}
+
+	// .column__list
+
+	&__list {
+		display: flex;
+		flex-direction: column;
+		.list__element{
+			margin: 5px 0;
+
+		}
+	}
+
+	// .column__openingday
+
+	&__openingday {
+	}
+
+	// .column__address
+
+	&__address {
+	}
+
+	// .column__number
+
+	&__number {
+	}
+
+	// .column__fax
+
+	&__fax {
+	}
+
+	// .column__email
+
+	&__email {
+		button{
+			background: transparent;
+			color:#777777;
+			font-size: 14px;
+			font-family: 'Poppins';
+			font-weight: 500;
+			transition: 0.4s ease-in-out;
+			&:hover{
+				color:$yellow;
+			}
+		}
+	}
+
+	// .column__socials
+
+	&__socials {
+		display: flex;
+	}
+
+	// .column__social
+
+	&__social {
+		cursor: pointer;
+		position: relative;
+		margin: 5px;
+		background: rgb(29, 29, 29);
+		width: 36px;
+		height: 36px;
+		transition: 0.4s ease-in-out;
+		svg{
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			transform:translate(-50%,-50%);
+			path{
+				transition: 0.4s ease-in-out;
+				fill: $white;
+			}
+			width: 16px;
+			height: 16px;
+		}
+		&:first-child{
+			margin: 5px 5px 5px 0;
+		}
+		&:last-child{
+			margin: 5px 0px 5px 5px;
+		}
+		&:hover{
+			background: $yellow;
+			svg{
+				path{
+					fill: #000;
+				}
+			}
+		}
+	}
+}
+.policy {
+	margin: 10px 0;
+	display: flex;
+	justify-content: space-between;
+	@media (max-width:768px) {
+		&__element {
+			margin: 0 0 40px 0;
+		}
+		margin: 20px 0;
+		justify-content: center;
+		flex-wrap: wrap;
+	}
+
+	// .policy__element
+
+	&__element {
+		text-transform: uppercase;
+		font-size: 13px;
+		font-family: 'Poppins';
+	}
+
+	// .policy__text
+
+	&__text {
+	}
+
+	// .policy__buttons
+
+	&__buttons {
+	}
+
+	// .policy__button
+
+	&__button {
+		cursor: pointer;
+		position: relative;
+		text-transform: uppercase;
+		line-height: 26px;
+		letter-spacing: 1.5px;
+		background: transparent;
+		font-family: 'Poppins';
+		color: $white;
+		margin: 0 25px;
+		font-size: 12px;
+		transition: 0.4s ease-in-out;
+		&:before{
+			position: absolute;
+			content: '';
+			left: -15px;
+			top: 50%;
+			width: 6px;
+			height: 6px;
+			transform: translate(0,-50%);
+			border-radius: 50%;
+			background:$white;
+		}
+		&:hover{
+			color:$yellow;
+		}
+	}
+}

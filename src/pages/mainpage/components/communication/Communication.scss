@@ -1,0 +1,68 @@
+@import './../../../../styles/colors.scss';
+
+.communication {
+	position: relative;
+	background: $white;
+	// .communication__buttons
+
+	&__buttons {
+		width: 100%;
+		position: absolute;
+		white-space: nowrap;
+		overflow: auto;
+		top: 0;
+		left: 50%;
+		transform: translate(-50%, -100%);
+	}
+
+	// .communication__button
+
+	&__button {
+		position: relative;
+		margin: 0 14px;
+		padding: 15px 30px ;
+		font-size: 16px;
+		font-weight: 700;
+		font-family: 'Poppins';
+		background: $yellow;
+		border-radius: 5px 16px 0px 0px;
+		transition: 0.4s ease-in-out; 
+		&::after{
+			transition: 0.4s ease-in-out; 
+			position:absolute;
+			content:'';
+			top: auto;
+			bottom: 0;
+			left: auto;
+			right: 0;
+			transform: translate(86%,0);
+			width: 0;
+			height: 0;
+			border-top: 50px solid transparent; 
+			border-left: 28px solid $yellow;
+		}
+		&.available{
+			background: $white;
+			&::after{
+				border-top: 50px solid transparent; 
+				border-left: 28px solid $white;
+			}
+			.button__name {
+				color: $red;
+				
+			}
+		}
+		
+	}
+	&__content{
+		padding: 70px 0;
+	}
+}
+.button {
+	// .button__name
+
+	&__name {
+		font-weight: 400;
+		color: rgb(0, 0, 0);
+	}
+}
