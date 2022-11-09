@@ -21,6 +21,7 @@
 	}
 	&__name {
 		.name__title{
+			background: transparent;
 			font-size: 36px;
 			@media (max-width:991px) {
 				font-size: 30px;
@@ -31,6 +32,12 @@
 			@media (max-width:480px) {
 				font-size: 22px;
 			}
+		}
+		.name__logo{
+			background: #000;
+		}
+		.name__subtitle{
+			background: #000;
 		}
 	}
 
