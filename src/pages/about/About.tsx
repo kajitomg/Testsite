@@ -6,7 +6,9 @@ import Pathbackground from '../components/path/components/background/Pathbackgro
 import Pathname from '../components/path/components/pathname/Pathname'
 import Pathtrek from '../components/path/components/pathtrek/Pathtrek'
 import Path from '../components/path/Path'
+import Successrate from '../mainpage/components/successrate/Successrate'
 import Intro from './components/intro/Intro'
+import './About.scss'
 
 const About = () => {
 	const navigate = useNavigate()
@@ -28,6 +30,7 @@ const About = () => {
 				</Container>
 			</Path>
 			<Intro />
+			<Successrate />
 			<Avatar />
 		</section>
 	)

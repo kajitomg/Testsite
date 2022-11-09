@@ -48,6 +48,7 @@ const Bottom: FC<BottomProps> = ({ setAvailableBurger, setVisibleBurger, headerH
 						</div>
 					</button>
 					<button className={['navigation', availableNavigation === 3 ? 'available' : ''].join(' ')} onClick={() => {
+						navigate('/services')
 						setAvailableNavigation(3)
 					}}>
 						<span className='navigation__name'>Services</span>

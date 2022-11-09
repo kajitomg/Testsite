@@ -1,8 +1,156 @@
 @import './../../../../styles/colors.scss';
 
-.intro{
+.intro {
+
 	z-index: 100;
 	background: $white;
-	width: 100%;
 	font-size: 40px;
+	padding: 110px 0;
+	// .intro__column
+	&__row{
+		display: flex;
+		margin: 10px;
+		@media (max-width:991px) {
+			flex-direction: column;
+		}
+	}
+	&__column {
+		position: relative;
+		text-align: left;
+		flex: 1 0 50%;
+	}
+	
+	&__name {
+		.name__logo {
+			left: 12%;
+			background: $white;
+			@media (max-width:320px) {
+				left: 25%;
+			}
+		}
+	
+		// .name__title
+	
+		.name__title {
+			background: $white;
+			padding: 18px 25px;
+			color: rgb(0, 0, 0);
+			@media (max-width:991px) {
+				font-size: 30px;
+			}
+			@media (max-width:768px) {
+				font-size: 26px;
+			}
+		}
+	
+		// .name__subtitle
+	
+		.name__subtitle {
+			font-weight: 600;
+			left: 20%;
+			background: $white;
+			color: $red;
+			@media (max-width:480px) {
+				left: 35%;
+			}
+			@media (max-width:320px) {
+				left: 45%;
+			}
+		}
+		
+	}
+	// .intro__text
+
+	&__text {
+		display: block;
+		color: #777777;
+		font-size: 14px;
+		font-family: 'Poppins';
+		line-height: 22px;
+		font-weight: 300;
+		text-align: left;
+		margin: 10px 0;
+	}
+
+	
+
+	// .intro__qualities
+
+	&__qualities {
+		display: flex;
+		flex-wrap: wrap;
+		margin: 30px 0;
+	}
+
+	// .intro__quality
+
+	&__quality {
+		display: flex;
+		justify-content: flex-start;
+		align-items: center;
+		position: relative;
+		flex: 1 0 20%;
+		margin: 10px 35px;
+		color: #777777;
+		line-height: 16px;
+		font-size: 14px;
+		font-family: 'Poppins';
+		img{
+			position: absolute;
+			top: 50%;
+			transform: translate(0, -50%);
+			left: -29px;
+			width: 14px;
+			height: 14px;
+		}
+		&::before{
+			position: absolute;
+			content: '';
+			top: 50%;
+			transform: translate(0, -50%);
+			left: -36px;
+			width: 28px;
+			height: 28px;
+			border-radius: 50%;
+			background: $yellow;
+		}
+	}
+
+	// .intro__button
+
+	&__button {
+		display: inline-block;
+		margin: 30px 0;
+		color: #222222;
+		background: $yellow;
+		padding: 15px 36px 12px;
+		border-radius: 5px;
+		font-size: 14px;
+		transition: 0.4s ease-in-out;
+		button{
+			transition: 0.4s ease-in-out;
+			color: #222222;
+			background: transparent;
+		}
+		&:hover{
+			button{
+				color: $white;
+			}
+			background: $red;
+		}
+	}
+
+	// .intro__image
+
+	&__image {
+		width: 100%;
+		height: 100%;
+		text-align: center;
+		img{
+			object-fit: cover;
+			width: 100%;
+			height: 100%;
+		}
+	}
 }
+

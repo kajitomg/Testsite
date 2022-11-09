@@ -9,6 +9,23 @@
 	// .successrate__name
 
 	&__name {
+			.name__logo {
+				background: rgb(0, 0, 0);
+			}
+		
+			// .name__title
+		
+			.name__title {
+				color: $white;
+			}
+		
+			// .name__subtitle
+		
+			.name__subtitle {
+				color: $white;
+				background: rgb(0, 0, 0);
+			}
+		
 	}
 
 	// .successrate__text
@@ -36,27 +53,7 @@
 	&__rate {
 	}
 }
-.name {
 
-	// .name__logo
-
-	&__logo {
-		background: rgb(0, 0, 0);
-	}
-
-	// .name__title
-
-	&__title {
-		color: $white;
-	}
-
-	// .name__subtitle
-
-	&__subtitle {
-		color: $white;
-		background: rgb(0, 0, 0);
-	}
-}
 .rate {
 	display: flex;
 	flex-direction: column;
