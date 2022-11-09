@@ -65,7 +65,7 @@
 		justify-content: center;
 		display: flex;
 		margin: 40px;
-		perspective: 14vh;
+		perspective: 200px;
 	}
 
 	// .slider__button
@@ -81,14 +81,14 @@
 		span{
 			transition: 0.3s ease-in-out;
 			position: absolute;
-			top: 55%;
+			top: 52%;
 			left: 50%;
 			transform: translate(-50%,-50%) rotate(45deg);
 			background: #000;
 			width: 10px;
 			height: 2px;
 			&:nth-child(2){
-				top: 45%;
+				top: 40%;
 				transform: translate(-50%,-50%) rotate(-45deg);
 
 			}
