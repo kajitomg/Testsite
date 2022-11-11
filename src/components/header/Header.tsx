@@ -24,6 +24,12 @@ const Header: FC<HeaderProps> = ({ }) => {
 	};
 	useEffect(() => {
 		window.addEventListener("scroll", handleScroll);
+		if (window.location.pathname === '/about') {
+			setAvailableNavigation(2)
+		}
+		if (window.location.pathname === '/services') {
+			setAvailableNavigation(3)
+		}
 		return () => window.removeEventListener("scroll", handleScroll);
 	}, []);
 

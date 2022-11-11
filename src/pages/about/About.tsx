@@ -9,6 +9,7 @@ import Path from '../components/path/Path'
 import Successrate from '../mainpage/components/successrate/Successrate'
 import Intro from './components/intro/Intro'
 import './About.scss'
+import Blog from './components/blog/Blog'
 
 const About = () => {
 	const navigate = useNavigate()
@@ -31,6 +32,7 @@ const About = () => {
 			</Path>
 			<Intro />
 			<Successrate />
+			<Blog />
 			<Avatar />
 		</section>
 	)
