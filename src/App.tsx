@@ -7,6 +7,7 @@ import Page from './components/page/Page'
 import Pagecontent from './components/pagecontent/Pagecontent'
 import About from './pages/about/About'
 import Mainpage from './pages/mainpage/Mainpage'
+import Service from './pages/services/Service'
 
 const App = () => {
 	return (
@@ -19,6 +20,7 @@ const App = () => {
 							<Route path='*' element={<Mainpage />} />
 							<Route path='/home' element={<Mainpage />} />
 							<Route path='/about' element={<About />} />
+							<Route path='/services' element={<Service />} />
 						</Routes>
 					</Pagecontent>
 					<Avatar />
