@@ -23,6 +23,17 @@ const Bottom: FC<BottomProps> = ({ setAvailableBurger, setVisibleBurger, headerH
 		window.addEventListener("scroll", handleScroll);
 		return () => window.removeEventListener("scroll", handleScroll);
 	}, []);
+	useEffect(() => {
+		if (window.location.pathname === '/home') {
+			setAvailableNavigation(1)
+		}
+		if (window.location.pathname === '/about') {
+			setAvailableNavigation(2)
+		}
+		if (window.location.pathname === '/services') {
+			setAvailableNavigation(3)
+		}
+	}, [window.location.pathname]);
 
 	return (
 		<section className={['bottom', scroll > headerHeight - (window.innerWidth > 767 ? fixedHeader.current?.offsetHeight / 2 : fixedHeader.current?.offsetHeight) ? 'available' : ''].join(' ')} ref={fixedHeader}>
@@ -55,13 +66,13 @@ const Bottom: FC<BottomProps> = ({ setAvailableBurger, setVisibleBurger, headerH
 						<div className='navigation__icon'>
 						</div>
 					</button>
-					<button className={['navigation', availableNavigation === 4 ? 'available' : ''].join(' ')} onClick={() => {
+					{/* <button className={['navigation', availableNavigation === 4 ? 'available' : ''].join(' ')} onClick={() => {
 						setAvailableNavigation(4)
 					}}>
 						<span className='navigation__name'>Contact</span>
 						<div className='navigation__icon'>
 						</div>
-					</button>
+					</button> */}
 				</nav>
 				{/* <section className='header__search search'>
 		<input className='search__input' type='text' placeholder='ENTER KEYWORD' />

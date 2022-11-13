@@ -24,8 +24,6 @@ const About = () => {
 						About
 					</Pathname>
 					<Pathtrek>
-						<button onClick={() => navigate('/home')}>Home</button>
-						<span>/</span>
 						About
 					</Pathtrek>
 				</Container>

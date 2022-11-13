@@ -13,7 +13,7 @@ interface HeaderProps {
 const Header: FC<HeaderProps> = ({ }) => {
 
 	const [scroll, setScroll] = useState<number>(0)
-	const [availableNavigation, setAvailableNavigation] = useState<number>(1)
+	const [availableNavigation, setAvailableNavigation] = useState<number>(0)
 	const [availableBurger, setAvailableBurger] = useState(false)
 	const [visibleBurger, setVisibleBurger] = useState(false)
 
@@ -27,16 +27,6 @@ const Header: FC<HeaderProps> = ({ }) => {
 		return () => window.removeEventListener("scroll", handleScroll);
 	}, []);
 
-	useEffect(() => {
-		if (window.location.pathname === '/about') {
-			setAvailableNavigation(2)
-		}
-		if (window.location.pathname === '/services') {
-			setAvailableNavigation(3)
-		}
-	}, [window.location.pathname]);
-
-
 	return (
 		<header className='header' ref={header}>
 			<Container>
@@ -48,7 +38,6 @@ const Header: FC<HeaderProps> = ({ }) => {
 					setVisibleBurger={setVisibleBurger}
 					setAvailableNavigation={setAvailableNavigation}
 					availableNavigation={availableNavigation}
-
 				/>
 				<Bottom
 					headerHeight={header.current?.offsetHeight}

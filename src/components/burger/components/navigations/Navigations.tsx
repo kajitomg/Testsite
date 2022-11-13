@@ -40,7 +40,7 @@ const Navigations: FC<NavigationsProps> = ({ availableNavigation, setAvailableNa
 					<span></span>
 				</div>
 			</button>
-			<button className={['navigation', ' content', availableNavigation === 4 ? 'available' : ''].join(' ')} onClick={() => {
+			{/* <button className={['navigation', ' content', availableNavigation === 4 ? 'available' : ''].join(' ')} onClick={() => {
 				setAvailableNavigation(4)
 			}}>
 				<span className='navigation__name'>Contact</span>
@@ -49,7 +49,7 @@ const Navigations: FC<NavigationsProps> = ({ availableNavigation, setAvailableNa
 					<span></span>
 					<span></span>
 				</div>
-			</button>
+			</button> */}
 		</nav>
 	)
 }

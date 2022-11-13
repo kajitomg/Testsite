@@ -7,10 +7,10 @@ import Pathname from '../components/path/components/pathname/Pathname'
 import Pathtrek from '../components/path/components/pathtrek/Pathtrek'
 import Path from '../components/path/Path'
 import Successrate from '../mainpage/components/successrate/Successrate'
+import Popular from './components/Popular/Popular'
 
 const Service
 	= () => {
-		const navigate = useNavigate()
 		return (
 			<section className='service'>
 				<Path>
@@ -22,12 +22,11 @@ const Service
 							Services
 						</Pathname>
 						<Pathtrek>
-							<button onClick={() => navigate('/home')}>Home</button>
-							<span>/</span>
 							Services
 						</Pathtrek>
 					</Container>
 				</Path >
+				<Popular />
 				<Successrate />
 				<Avatar />
 			</section>
