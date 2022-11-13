@@ -5,7 +5,7 @@ import './Partners.scss'
 const Partners = () => {
 	const ref = useRef<null | any>(null)
 	const [scroll, setScroll] = useState(0)
-
+	console.log(scroll)
 	return (
 		<section className='partners'>
 			<Container>
@@ -57,7 +57,7 @@ const Partners = () => {
 						</div>
 						<div className='partner-slider__button' onClick={() => {
 							ref.current.scrollTo({ left: scroll + ref.current.getBoundingClientRect().width, behavior: 'smooth' });
-							if (scroll <= ref.current.getBoundingClientRect().width) {
+							if (scroll < ref.current.getBoundingClientRect().width) {
 								setScroll(scroll + ref.current.getBoundingClientRect().width)
 							}
 						}}>

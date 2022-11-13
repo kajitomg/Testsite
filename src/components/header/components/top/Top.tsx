@@ -12,7 +12,7 @@ const Top: FC<TopProps> = ({ }) => {
 
 	return (
 		<section className='top'>
-			<div className='top__logo' onClick={() => { navigate('/mainpage') }}>
+			<div className='top__logo' onClick={() => { navigate('/home') }}>
 				<img src="https://dthomefix.wpenginepowered.com/wp-content/themes/homefix/images/logo.png" alt="logo" />
 			</div>
 			<Contacts />
