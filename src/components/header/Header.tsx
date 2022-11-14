@@ -13,7 +13,7 @@ interface HeaderProps {
 const Header: FC<HeaderProps> = ({ }) => {
 
 	const [scroll, setScroll] = useState<number>(0)
-	const [availableNavigation, setAvailableNavigation] = useState<number>(0)
+	const [availableNavigation, setAvailableNavigation] = useState<number>(1)
 	const [availableBurger, setAvailableBurger] = useState(false)
 	const [visibleBurger, setVisibleBurger] = useState(false)
 
